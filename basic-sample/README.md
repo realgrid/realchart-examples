@@ -1,4 +1,4 @@
-# RealGrid Touch Basic 예제
+# RealChart Basic 예제
 
 ## 설치
 
