@@ -1,0 +1,9 @@
+@import url(
+  "../../../node_modules/realchart/dist/realchart-style.css"
+);
+#realchart {
+    width: 850px;
+    height: 550px;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+  }
