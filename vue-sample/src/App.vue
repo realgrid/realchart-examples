@@ -24,9 +24,6 @@ export default {
 html {
   margin: 0px;
 }
-body {
-  margin: 20px 30px;
-}
 #realchart {
   width: 850px;
   height: 550px;
