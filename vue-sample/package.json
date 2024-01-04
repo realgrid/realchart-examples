@@ -8,8 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.3.4",
-    "realchart": "latest"
+    "realchart": "^0.9.29",
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.3.4",

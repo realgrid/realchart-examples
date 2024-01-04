@@ -49,6 +49,7 @@ export default {
   },
   mounted() {
     this.chart = RealChart.createChart(document, 'realchart', this.config);
+    console.log(RealChart.getVersion())
   },
 };
 </script>
