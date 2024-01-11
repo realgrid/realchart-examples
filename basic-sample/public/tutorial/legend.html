@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RealChart - Legend</title>
+<style>
+html {
+	margin: 0px;
+}
+body {
+	margin: 20px 30px;
+}
+#realchart {
+	width: 850px;
+	height: 550px;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+}
+</style>
+<link href="../css/realchart-style.css" rel="stylesheet">
+
+<script type="text/javascript" src="../js/realchart-lic.js"></script>
+<script type="text/javascript" src="../js/realchart.min.js"></script>
+<script type="text/javascript" src="./legend.js"></script>
+<script type="text/javascript">
+	window.addEventListener('DOMContentLoaded', function () {
+		try {
+			init();
+		} catch (err) {
+			alert(err);
+			console.error(err);
+		}
+	});	
+</script>
+</head>
+<body>
+	<div id="realchart"></div>
+	<div id="actions"></div>
+</body>
+</html>		
