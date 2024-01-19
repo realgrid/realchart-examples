@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>RealChart - Log Axis</title>
+    <link href="../css/realchart-style.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/realchart-lic.js"></script>
+    <script type="text/javascript" src="../js/realchart.min.js"></script>
+    <script type="text/javascript" src="./axis-log.js"></script>
+  </head>
+  <body>
+    <div id="realchart" style="width: 700px;height:400px;"></div>
+    <script type="text/javascript">
+      window.addEventListener('DOMContentLoaded', function () {
+        try {
+          init();
+        } catch (err) {
+          alert(err);
+          console.error(err);
+        }
+      });	
+    </script>
+  </body>
+</html>
