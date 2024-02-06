@@ -1,7 +1,7 @@
 
 RealChart.createChart(document, 'realchart', { 
   // 차트 제목 설정.
-  title: 'Line Chart',
+  title: 'Area Chart',
   xAxis: {
     type: "category",
     // 명시적으로 지정하는 카테고리 목록 추가.
@@ -14,8 +14,8 @@ RealChart.createChart(document, 'realchart', {
   },
   series: [
     {
-      // line 시리즈로 설정.
-      type: 'line',
+      // area 시리즈로 설정.
+      type: 'area',
       // 데이터 포인트를 생성하는데 사용되는 값 목록 추가.
       data: [
         4.2,  5.7,  7.9, 13.9,
