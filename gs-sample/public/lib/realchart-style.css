@@ -219,7 +219,7 @@
     --rct-navigator-thumb-fill:#0098ff;
 }
 .rct-root[data-theme='dark'] {
-    --rct-focus-stroke: yellow;
+    --rct-focus-stroke: #ccc;
     --rct-text-fill: #fff;
 
     --rct-title-fill: #fff;
@@ -400,6 +400,9 @@
 .rct-legend-item-marker[data-hidden] {
     fill: #aaa !important;
     stroke: #aaa !important;
+}
+.rct-legend-item-marker[data-hidden] path[data-fill] {
+    fill: #aaa !important;
 }
 
 /** plot area */
@@ -640,21 +643,22 @@
     transition-property: opacity;
     transition-duration: 0.7s;
 }
-.rct-series[data-unfocus] {
-    opacity: 0.2;
+.rct-series[data-unhover] {
+    opacity: 0.2 !important;
 }
-.rct-series .rct-point[data-focus] {
+.rct-series .rct-point[data-hover], .rct-point[data-unhover] {
     stroke: var(--rct-focus-stroke) !important;
-    stroke-width: var(--rct-focus-stroke-width);
-    filter: brightness(115%);
+    stroke-width: var(--rct-focus-stroke-width) !important;
+    filter: brightness(115%) !important;
+    opacity: 1 !important;
 }
 .rct-point-labels {
     opacity: inherit;
     transition-property: opacity;
     transition-duration: 0.7s;
 }
-.rct-point-labels[data-unfocus] {
-    opacity: 0.3;
+.rct-point-labels[data-unhover] {
+    opacity: 0.3 !important;
 }
 
 /** rct-point 대신 여기에 지정해야 outline에 반영된다. */
@@ -695,14 +699,6 @@
 .rct-line-series .rct-point {
     stroke-dasharray: none;
 }
-.rct-line-series .rct-point[data-focus] {
-    stroke: #0088ff20 !important; 
-    stroke-width: 9px !important;
-    opacity: inherit !important;
-    /** TODO: 아래가 적용되지 않고 있다 */
-    transition-property: opacity;
-    transition-duration: 0.7s;
-}
 .rct-line-series-flag {
     font-weight: bold;
     font-size: 0.9em;
@@ -740,6 +736,9 @@
 .rct-scatter-series {
     fill-opacity: 0.7;
 }
+.rct-scatter-series .rct-point[data-hover] {
+    fill-opacity: 0.9;
+}
 
 /** boxplot series */
 .rct-boxplot-series {
@@ -761,7 +760,7 @@
     stroke: #333;
     stroke-dasharray: 2;
 }
-.rct-boxplot-series .rct-point[data-focus] .rct-boxplot-point-stem {
+.rct-boxplot-series .rct-point[data-hover] .rct-boxplot-point-stem {
     stroke: black;
     stroke-dasharray: none;
     stroke-width: 2px;
@@ -772,7 +771,7 @@
     stroke-width: 1;
     fill-opacity: 0.85;
 }
-.rct-candlestick-series .rct-point[data-focus] {
+.rct-candlestick-series .rct-point[data-hover] {
     fill-opacity: 0.5;
 }
 .rct-candlestick-series .rct-point[data-decline] {
@@ -793,7 +792,7 @@
 .rct-ohlc-series .rct-point[data-decline] {
     stroke: #00f;
 }
-.rct-ohlc-series .rct-point[data-focus] .rct-ohlc-point-back {
+.rct-ohlc-series .rct-point[data-hover] .rct-ohlc-point-back {
     fill: #0088ff20 !important;
 }
 .rct-ohlc-point-back {
@@ -823,7 +822,7 @@
     stroke: #008;
     stroke-width: 2px;
 }
-.rct-errorbar-series .rct-point[data-focus] .rct-errorbar-point-back {
+.rct-errorbar-series .rct-point[data-hover] .rct-errorbar-point-back {
     fill: #0088ff20 !important;
 }
 
@@ -834,11 +833,11 @@
 .rct-lollipop-point-marker {
     stroke: none;
 }
-.rct-lollipop-series .rct-point[data-focus] {
+.rct-lollipop-series .rct-point[data-hover] {
     stroke: var(--rct-focus-stroke);
     stroke-width: inherit;
 }
-.rct-lollipop-series .rct-point[data-focus] .rct-lollipop-point-marker {
+.rct-lollipop-series .rct-point[data-hover] .rct-lollipop-point-marker {
     stroke: var(--rct-focus-stroke);
     stroke-width: var(--rct-focus-stroke-width);
 }
@@ -850,11 +849,11 @@
 .rct-dumbbell-point-marker {
     stroke: none;
 }
-.rct-dumbbell-series .rct-point[data-focus] {
+.rct-dumbbell-series .rct-point[data-hover] {
     stroke: var(--rct-focus-stroke);
     stroke-width: inherit;
 }
-.rct-dumbbell-series .rct-point[data-focus] .rct-dumbbell-point-marker {
+.rct-dumbbell-series .rct-point[data-hover] .rct-dumbbell-point-marker {
     stroke: var(--rct-focus-stroke);
     stroke-width: var(--rct-focus-stroke-width);
 }
@@ -863,7 +862,7 @@
 .rct-equalizer-series {
     fill-opacity: 0.9;
 }
-.rct-equalizer-series .rct-point[data-focus] {
+.rct-equalizer-series .rct-point[data-hover] {
     filter: brightness(120%);
 }
 
@@ -876,7 +875,7 @@
 .rct-vector-series {
     stroke-width: 2px;
 }
-.rct-vector-series .rct-point[data-focus] {
+.rct-vector-series .rct-point[data-hover] {
     stroke-width: 5px;
 }
 
@@ -903,7 +902,7 @@
 .rct-funnel-series .rct-point {
     stroke: white;
 }
-.rct-funnel-series .rct-point[data-focus] {
+.rct-funnel-series .rct-point[data-hover] {
     stroke: black;
     stroke-width: 2px;
 }

@@ -26,3 +26,16 @@ const chart = RealChart.createChart(document, 'realchart', {
     },
   ],
 });  
+
+const leftLegend = () => {
+  chart.legend.set("location",'left');
+};
+const rightLegend = () => {
+  chart.legend.set("location",'right');
+};
+const topLegend = () => {
+  chart.legend.set("location",'top');
+};
+const bottomLegend = () => {
+  chart.legend.set("location",'bottom');
+};

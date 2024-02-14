@@ -8,6 +8,10 @@ let config = {
       fontSize: "48px",
       fontWeight: "bold",
       fill: "red"
+    },
+    // backgroundStyle 설정
+    backgroundStyle: {
+      fill: 'green'
     }
   },
   xAxis: {

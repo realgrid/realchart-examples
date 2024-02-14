@@ -3,6 +3,7 @@ let config = {
   title: "Theme & Palette",
   options: {
     theme: "default",
+    palette: "default"
   },
   xAxis: {
     // 카테고리 타입 작성.
