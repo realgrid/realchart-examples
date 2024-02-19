@@ -1,7 +1,7 @@
 RealChart.createChart(document, "realchart", {
   // 차트 제목 설정.
   title: "Bubble Chart",
-  series: [
+  series: 
     {
       // bubble 시리즈로 설정.
       type: "bubble",
@@ -23,5 +23,5 @@ RealChart.createChart(document, "realchart", {
         [44, 83, 22],
       ],
     },
-  ],
+
 });
