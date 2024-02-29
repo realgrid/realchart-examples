@@ -48,7 +48,7 @@ export default {
     };
   },
   mounted() {
-    this.chart = RealChart.createChart(document, 'realchart', this.config);
+    this.chart = RealChart.createChart(document, this.domName, this.config);
     console.log(RealChart.getVersion())
   },
 };
