@@ -1,1 +1,2 @@
-var realChartLic = 'upVcPE+wPOkOR/egW8JuxkM/nBOseBrflwxYpzGZyYm9cY8amGDkiMnVeQKUHJDjW2y71jtk+wte7L7C4dZzvLkgLldhEufVcJQVB3j0jxbQX/333q4sjQ==';
+var realChartLic =
+    'upVcPE+wPOkOR/egW8JuxkM/nBOseBrflwxYpzGZyYm9cY8amGDkiMnVeQKUHJDjW2y71jtk+wsbZML0RZzUkp9cVDxFtwzVULX2tp6Wj4eOx6QfyWxF6jU2pJNMkfVHLm7UaBrMFxXRB4hu3LIgQZMVWpaY093J';
