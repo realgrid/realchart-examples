@@ -1,4 +1,10 @@
 let config = {
+  options: {
+    // dark, real 중에 하나를 지정해 차트의 테마를 적용한다.
+    theme: 'dark',
+    // gray, warm, cool, forest, vintage, unicorn 중에 하나를 지정해 dataPoint의 기본 색상을 변경한다.
+    palette: 'gray'
+  },
   title: {
     text: "Legends",
     // subtitle이 title보다 클 때 동작을 확인할 수 있습니다. 아래 style의 주석을 해제할 경우 변화 확인 가능
