@@ -4,7 +4,7 @@
     font-family: var(--rct-font-family);
     font-size: var(--rct-font-size);
     color: #000;
-    /* background-color: white; */
+    /* background-color: #fff; */
     /* word-break: break-all;
     word-wrap: break-word; */
     -webkit-touch-callout: default;
@@ -26,7 +26,7 @@
 }
 
 /** palette */
-.rct-root {
+:root, .rct-root {
     --color-1: #0098ff;
     --color-2: #66d0ff;
     --color-3: #ff5c35;
@@ -136,11 +136,11 @@
 .rct-control[data-theme='real'] {
 	--rct-background: #264653;
 }
-.rct-root {
+:root, .rct-root {
     --rct-font-family: AppleSDGothicNeo-Light, "HelveticaNeue", "Malgun Gothic", "맑은 고딕", sans-serif;
     --rct-font-size: 16px;
 
-    --rct-focus-stroke: black;
+    --rct-focus-stroke: #000;
     --rct-focus-stroke-width: 2px;
     --rct-text-fill: #333;
 
@@ -153,14 +153,14 @@
     --rct-axis-line-stroke: #aaa;
     --rct-axis-baseline-stroke: #333;
     --rct-axis-tick-stroke: #555;
-    --rct-axis-label-fill: #555;
+    --rct-axis-label-fill: #333;
     --rct-axis-grid-line-stroke: #ddd;
     --rct-axis-grid-line-stroke-start: none;
     --rct-axis-grid-line-stroke-end: none;
     --rct-axis-grid-line-stroke-width: 1px;
     --rct-axis-scrollbar-track-fill: #fdfdfd;
     --rct-axis-scrollbar-track-stroke: #aaa;
-    --rct-axis-scrollbar-thumb-fill: lightgray;
+    --rct-axis-scrollbar-thumb-fill: #d3d3d3;
     --rct-axis-scrollbar-rx: 4px;
     
     --rct-legend-background: none;
@@ -175,6 +175,9 @@
     --rct-point-label-stroke: none;
     --rct-point-label-fill: #333;
 
+    --rct-point-label-line-stroke-width: 1px;
+    --rct-point-label-line-stroke: #585;
+
     --rct-credits-fill: #777;
 
     /* polar */
@@ -184,7 +187,7 @@
 
     /* linear gauge */
     --rct-linear-gauge-background-fill: #eee;
-    --rct-linear-gauge-value-fill: green;
+    --rct-linear-gauge-value-fill: #008000;
     --rct-linear-gauge-band-tick-labels-stroke: #333;
     --rct-linear-gauge-group-label-fill: #333;
     /** bullet gauge */
@@ -203,9 +206,9 @@
     --rct-gauge-scale-tick: #555;
     --rct-gauge-scale-tick-labels-stroke: #333;
     /* clock gauge */
-    --rct-clock-gauge-face-fill: white;
+    --rct-clock-gauge-face-fill: #fff;
     --rct-clock-gauge-rim-fill: #eee;
-    --rct-clock-gauge-rim-stroke: gray;
+    --rct-clock-gauge-rim-stroke: #808080;
     --rct-clock-gauge-tick-stroke: #333;
     --rct-clock-gauge-minor-tick-stroke: #555;
     --rct-clock-gauge-tick-label-fill: #333;
@@ -215,7 +218,7 @@
     /** series navigator */
     --rct-navigator-handle-color: #0098ff; 
     --rct-navigator-handle-hover-color: #55c;
-    --rct-navigator-track-fill: lightgray;
+    --rct-navigator-track-fill: #d3d3d3;
     --rct-navigator-thumb-fill:#0098ff;
 }
 .rct-root[data-theme='dark'] {
@@ -329,13 +332,13 @@
 
 /** label */
 .rct-label-dark {
-    fill: black;
+    fill: #000;
 }
 .rct-label-light {
-    fill: white;
+    fill: #fff;
 }
 .rct-label-background {
-    fill: lightgray;
+    fill: #d3d3d3;
 }
 
 /** button */
@@ -364,7 +367,7 @@
 /** title */
 .rct-title {
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 22px;
     fill: var(--rct-title-fill);
 }
 .rct-title-background {
@@ -372,7 +375,7 @@
 }
 .rct-subtitle {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 15px;
     fill: var(--rct-subtitle-fill);
 }
 .rct-subtitle-background {
@@ -384,6 +387,7 @@
     fill: var(--rct-legend-fill);
     stroke: none;
     padding: 3px 6px;
+    font-size: 14px;
 }
 .rct-legend-background {
     fill: var(--rct-legend-background);
@@ -392,7 +396,7 @@
 }
 .rct-legend-item-label[data-hidden] {
     fill: var(--rct-legend-item-disabled);
-    text-decoration: var(--rct-legend-item-disabled-decoration)
+    text-decoration: var(--rct-legend-item-disabled-decoration);
 }
 /* .rct-legend-item-marker {
     stroke: none;
@@ -416,7 +420,7 @@
 
 /** axis */
 .rct-axis-title {
-    font-size: 16px;
+    font-size: 15px;
     fill: var(--rct-axis-title-fill);
 }
 .rct-axis-title-background {
@@ -448,7 +452,7 @@
 }
 .rct-axis-break {
     stroke: #aaa;
-    fill: white;
+    fill: #fff;
     fill-opacity: 0.9;
 }
 .rct-axis-guide-label {
@@ -544,7 +548,7 @@
 }
 
 .rct-series-trendline {
-    stroke: red;
+    stroke: #ff0000;
     stroke-width: 2px;
     stroke-linejoin: round;
     fill: none;
@@ -673,7 +677,8 @@
     opacity: 1;
 }
 .rct-point-label-lines {
-    stroke: #585;
+    stroke-width: var(--rct-point-label-line-stroke-width);
+    stroke: var(--rct-point-label-line-stroke);
     fill: none;
 }
 
@@ -684,7 +689,7 @@
 
 /** circlebar series */
 .rct-circlebar-series .rct-point {
-    stroke: white;
+    stroke: #fff;
 }
 
 /** barrange series */
@@ -761,7 +766,7 @@
     stroke-dasharray: 2;
 }
 .rct-boxplot-series .rct-point[data-hover] .rct-boxplot-point-stem {
-    stroke: black;
+    stroke: #000;
     stroke-dasharray: none;
     stroke-width: 2px;
 }
@@ -868,7 +873,7 @@
 
 /** histogram */
 .rct-histogram-series .rct-point {
-    stroke: white;
+    stroke: #fff;
 }
 
 /** vector series */
@@ -886,12 +891,12 @@
 
 /** treemap series */
 .rct-treemap-series .rct-point {
-    stroke: white;
+    stroke: #fff;
 }
 
 /** pie series */
 .rct-pie-series .rct-point {
-    stroke: white;
+    stroke: #fff;
 }
 .rct-pie-series-inner {
     font-size: 20px;
@@ -900,10 +905,10 @@
 
 /** funnel series */
 .rct-funnel-series .rct-point {
-    stroke: white;
+    stroke: #fff;
 }
 .rct-funnel-series .rct-point[data-hover] {
-    stroke: black;
+    stroke: #000;
     stroke-width: 2px;
 }
 
@@ -939,7 +944,7 @@
     font-size: 20px;
 }
 .rct-circle-gauge-pin {
-    fill: white;
+    fill: #fff;
     stroke: #333;
     stroke-width: 3px;
 }
@@ -971,7 +976,7 @@
     font-size: 1em;
 }
 .rct-clock-gauge-pin {
-    fill: white;
+    fill: #fff;
     stroke: #333;
     stroke-width: 3px;
 }
@@ -1060,10 +1065,10 @@
     opacity: 0.9;
 }
 .rct-tooltip-back {
-    fill: white;
+    fill: #fff;
 }
 .rct-tooltip-tail {
-    fill: white;
+    fill: #fff;
 }
 .rct-tooltip-text {
     fill: #333;
@@ -1110,7 +1115,7 @@
     display: none;
 }
 .rct-navigator-back {
-    fill: white;
+    fill: #fff;
     stroke: #f0f0f0;
 }
 .rct-navigator-mask {

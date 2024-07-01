@@ -38,14 +38,14 @@ const chart = RealChart.createChart(document, "realchart", {
 });
 
 const leftLegend = () => {
-  chart.legend.set("location", "left");
+  chart.legend.updateOption("location", "left");
 };
 const rightLegend = () => {
-  chart.legend.set("location", "right");
+  chart.legend.updateOption("location", "right");
 };
 const topLegend = () => {
-  chart.legend.set("location", "top");
+  chart.legend.updateOption("location", "top");
 };
 const bottomLegend = () => {
-  chart.legend.set("location", "bottom");
+  chart.legend.updateOption("location", "bottom");
 };
