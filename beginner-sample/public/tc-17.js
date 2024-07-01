@@ -28,5 +28,5 @@ let config = {
 const chart = RealChart.createChart(document, "realchart", config);
 
 document.getElementById("align").onchange = (e) => {
-  chart.subtitle.set("align", e.target.value);
+  chart.subtitle.updateOption("align", e.target.value);
 };
