@@ -7937,10 +7937,10 @@ readdirp@~3.6.0:
   dependencies:
     picomatch "^2.2.1"
 
-realchart@^0.9.29:
-  version "0.9.29"
-  resolved "https://registry.npmjs.org/realchart/-/realchart-0.9.29.tgz"
-  integrity sha512-+Hs8Y/BMMsMb/TS7lnq1ire2wPsDiVkYJxeIzcQvbtFDjjS63ji36x3ucE+Mevp+e6CmdwPqTsVuHpq1llO9vA==
+realchart@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.npmjs.org/realchart/-/realchart-1.1.3.tgz"
+  integrity sha512-UOt4bwfxGc785gWoxHF6JdjH8vOr/Z7o09ox9VXibizc31z8o6rOIFHHTN28F5qbmVl01/0twrlpC8Ofj5oyEg==
 
 recursive-readdir@^2.2.2:
   version "2.2.3"

@@ -9,7 +9,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "realchart": "^0.9.29",
+    "realchart": "^1.1.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

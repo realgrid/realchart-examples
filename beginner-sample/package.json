@@ -7,5 +7,8 @@
     "dev": "npx http-server -c-1"
   },
   "author": "dltlghkd930217",
-  "license": "WooriTech Inc."
+  "license": "WooriTech Inc.",
+  "dependencies": {
+    "realchart": "^1.1.3"
+  }
 }

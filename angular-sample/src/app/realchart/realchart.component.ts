@@ -47,7 +47,7 @@ export class RealChartComponent implements OnInit {
       },
     };
 
-    const chart = RealChart.createChart(document, 'realchart', config);
+    const chart = RealChart.createChart(document, 'realchart', config as any);
   }
 }
 
