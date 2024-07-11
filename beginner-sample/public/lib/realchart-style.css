@@ -413,6 +413,7 @@
 .rct-body-background {
     stroke: var(--rct-body-background-stroke);
     fill: none;
+    shape-rendering: crispEdges;
 }
 .rct-body-background[data-polar] {
     stroke: none;
@@ -429,14 +430,17 @@
 .rct-axis-line {
     stroke: var(--rct-axis-line-stroke);
     stroke-width: 1px;
+    shape-rendering: crispEdges;
 }
 .rct-axis-baseline {
     stroke: var(--rct-axis-baseline-stroke);
     stroke-width: 1px;
+    shape-rendering: crispEdges;
 }
 .rct-axis-tick {
     stroke: var(--rct-axis-tick-stroke);
     stroke-width: 1px;
+    shape-rendering: crispEdges;
 }
 .rct-axis-labels {
     font-size: 14px;
@@ -449,6 +453,7 @@
 .rct-axis-grid-line {
     stroke: var(--rct-axis-grid-line-stroke);
     stroke-width: var(--rct-axis-grid-line-stroke-width);
+    shape-rendering: crispEdges;
 }
 .rct-axis-break {
     stroke: #aaa;
@@ -461,11 +466,13 @@
 .rct-axis-guide-line {
     stroke: #555;
     stroke-width: 2px;
+    shape-rendering: crispEdges;
 }
 .rct-axis-guide-range {
     stroke: none;
     fill: #0088ff;
     fill-opacity: 0.2;
+    shape-rendering: crispEdges;
 }
 .rct-axis-scrollbar-track {
     fill: var(--rct-axis-scrollbar-track-fill);
@@ -1091,6 +1098,7 @@
     fill: none;
     stroke-width: 1;
     stroke: #80808080;
+    shape-rendering: crispEdges;
 }
 .rct-crosshair-bar {
     stroke: none;
@@ -1117,6 +1125,7 @@
 .rct-navigator-back {
     fill: #fff;
     stroke: #f0f0f0;
+    shape-rendering: crispEdges;
 }
 .rct-navigator-mask {
     fill: #4488cc20;
@@ -1130,7 +1139,6 @@
     fill: var(--rct-navigator-handle-hover-color);
     stroke: var(--rct-navigator-handle-hover-color);
 }
-
 .rct-navigator-track {
     fill: var(--rct-navigator-track-fill);
     stroke: var(--rct-navigator-track-fill);

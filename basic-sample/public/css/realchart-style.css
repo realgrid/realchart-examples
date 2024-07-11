@@ -4,7 +4,7 @@
     font-family: var(--rct-font-family);
     font-size: var(--rct-font-size);
     color: #000;
-    /* background-color: white; */
+    /* background-color: #fff; */
     /* word-break: break-all;
     word-wrap: break-word; */
     -webkit-touch-callout: default;
@@ -26,7 +26,7 @@
 }
 
 /** palette */
-.rct-root {
+:root, .rct-root {
     --color-1: #0098ff;
     --color-2: #66d0ff;
     --color-3: #ff5c35;
@@ -136,11 +136,11 @@
 .rct-control[data-theme='real'] {
 	--rct-background: #264653;
 }
-.rct-root {
+:root, .rct-root {
     --rct-font-family: AppleSDGothicNeo-Light, "HelveticaNeue", "Malgun Gothic", "맑은 고딕", sans-serif;
     --rct-font-size: 16px;
 
-    --rct-focus-stroke: black;
+    --rct-focus-stroke: #000;
     --rct-focus-stroke-width: 2px;
     --rct-text-fill: #333;
 
@@ -153,14 +153,14 @@
     --rct-axis-line-stroke: #aaa;
     --rct-axis-baseline-stroke: #333;
     --rct-axis-tick-stroke: #555;
-    --rct-axis-label-fill: #555;
+    --rct-axis-label-fill: #333;
     --rct-axis-grid-line-stroke: #ddd;
     --rct-axis-grid-line-stroke-start: none;
     --rct-axis-grid-line-stroke-end: none;
     --rct-axis-grid-line-stroke-width: 1px;
     --rct-axis-scrollbar-track-fill: #fdfdfd;
     --rct-axis-scrollbar-track-stroke: #aaa;
-    --rct-axis-scrollbar-thumb-fill: lightgray;
+    --rct-axis-scrollbar-thumb-fill: #d3d3d3;
     --rct-axis-scrollbar-rx: 4px;
     
     --rct-legend-background: none;
@@ -175,6 +175,9 @@
     --rct-point-label-stroke: none;
     --rct-point-label-fill: #333;
 
+    --rct-point-label-line-stroke-width: 1px;
+    --rct-point-label-line-stroke: #585;
+
     --rct-credits-fill: #777;
 
     /* polar */
@@ -184,7 +187,7 @@
 
     /* linear gauge */
     --rct-linear-gauge-background-fill: #eee;
-    --rct-linear-gauge-value-fill: green;
+    --rct-linear-gauge-value-fill: #008000;
     --rct-linear-gauge-band-tick-labels-stroke: #333;
     --rct-linear-gauge-group-label-fill: #333;
     /** bullet gauge */
@@ -203,9 +206,9 @@
     --rct-gauge-scale-tick: #555;
     --rct-gauge-scale-tick-labels-stroke: #333;
     /* clock gauge */
-    --rct-clock-gauge-face-fill: white;
+    --rct-clock-gauge-face-fill: #fff;
     --rct-clock-gauge-rim-fill: #eee;
-    --rct-clock-gauge-rim-stroke: gray;
+    --rct-clock-gauge-rim-stroke: #808080;
     --rct-clock-gauge-tick-stroke: #333;
     --rct-clock-gauge-minor-tick-stroke: #555;
     --rct-clock-gauge-tick-label-fill: #333;
@@ -215,11 +218,11 @@
     /** series navigator */
     --rct-navigator-handle-color: #0098ff; 
     --rct-navigator-handle-hover-color: #55c;
-    --rct-navigator-track-fill: lightgray;
+    --rct-navigator-track-fill: #d3d3d3;
     --rct-navigator-thumb-fill:#0098ff;
 }
 .rct-root[data-theme='dark'] {
-    --rct-focus-stroke: yellow;
+    --rct-focus-stroke: #ccc;
     --rct-text-fill: #fff;
 
     --rct-title-fill: #fff;
@@ -329,13 +332,13 @@
 
 /** label */
 .rct-label-dark {
-    fill: black;
+    fill: #000;
 }
 .rct-label-light {
-    fill: white;
+    fill: #fff;
 }
 .rct-label-background {
-    fill: lightgray;
+    fill: #d3d3d3;
 }
 
 /** button */
@@ -364,7 +367,7 @@
 /** title */
 .rct-title {
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 22px;
     fill: var(--rct-title-fill);
 }
 .rct-title-background {
@@ -372,7 +375,7 @@
 }
 .rct-subtitle {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 15px;
     fill: var(--rct-subtitle-fill);
 }
 .rct-subtitle-background {
@@ -384,6 +387,7 @@
     fill: var(--rct-legend-fill);
     stroke: none;
     padding: 3px 6px;
+    font-size: 14px;
 }
 .rct-legend-background {
     fill: var(--rct-legend-background);
@@ -392,7 +396,7 @@
 }
 .rct-legend-item-label[data-hidden] {
     fill: var(--rct-legend-item-disabled);
-    text-decoration: var(--rct-legend-item-disabled-decoration)
+    text-decoration: var(--rct-legend-item-disabled-decoration);
 }
 /* .rct-legend-item-marker {
     stroke: none;
@@ -401,11 +405,15 @@
     fill: #aaa !important;
     stroke: #aaa !important;
 }
+.rct-legend-item-marker[data-hidden] path[data-fill] {
+    fill: #aaa !important;
+}
 
 /** plot area */
 .rct-body-background {
     stroke: var(--rct-body-background-stroke);
     fill: none;
+    shape-rendering: crispEdges;
 }
 .rct-body-background[data-polar] {
     stroke: none;
@@ -413,7 +421,7 @@
 
 /** axis */
 .rct-axis-title {
-    font-size: 16px;
+    font-size: 15px;
     fill: var(--rct-axis-title-fill);
 }
 .rct-axis-title-background {
@@ -422,14 +430,17 @@
 .rct-axis-line {
     stroke: var(--rct-axis-line-stroke);
     stroke-width: 1px;
+    shape-rendering: crispEdges;
 }
 .rct-axis-baseline {
     stroke: var(--rct-axis-baseline-stroke);
     stroke-width: 1px;
+    shape-rendering: crispEdges;
 }
 .rct-axis-tick {
     stroke: var(--rct-axis-tick-stroke);
     stroke-width: 1px;
+    shape-rendering: crispEdges;
 }
 .rct-axis-labels {
     font-size: 14px;
@@ -442,10 +453,11 @@
 .rct-axis-grid-line {
     stroke: var(--rct-axis-grid-line-stroke);
     stroke-width: var(--rct-axis-grid-line-stroke-width);
+    shape-rendering: crispEdges;
 }
 .rct-axis-break {
     stroke: #aaa;
-    fill: white;
+    fill: #fff;
     fill-opacity: 0.9;
 }
 .rct-axis-guide-label {
@@ -454,11 +466,13 @@
 .rct-axis-guide-line {
     stroke: #555;
     stroke-width: 2px;
+    shape-rendering: crispEdges;
 }
 .rct-axis-guide-range {
     stroke: none;
     fill: #0088ff;
     fill-opacity: 0.2;
+    shape-rendering: crispEdges;
 }
 .rct-axis-scrollbar-track {
     fill: var(--rct-axis-scrollbar-track-fill);
@@ -541,7 +555,7 @@
 }
 
 .rct-series-trendline {
-    stroke: red;
+    stroke: #ff0000;
     stroke-width: 2px;
     stroke-linejoin: round;
     fill: none;
@@ -640,21 +654,22 @@
     transition-property: opacity;
     transition-duration: 0.7s;
 }
-.rct-series[data-unfocus] {
-    opacity: 0.2;
+.rct-series[data-unhover] {
+    opacity: 0.2 !important;
 }
-.rct-series .rct-point[data-focus] {
+.rct-series .rct-point[data-hover], .rct-point[data-unhover] {
     stroke: var(--rct-focus-stroke) !important;
-    stroke-width: var(--rct-focus-stroke-width);
-    filter: brightness(115%);
+    stroke-width: var(--rct-focus-stroke-width) !important;
+    filter: brightness(115%) !important;
+    opacity: 1 !important;
 }
 .rct-point-labels {
     opacity: inherit;
     transition-property: opacity;
     transition-duration: 0.7s;
 }
-.rct-point-labels[data-unfocus] {
-    opacity: 0.3;
+.rct-point-labels[data-unhover] {
+    opacity: 0.3 !important;
 }
 
 /** rct-point 대신 여기에 지정해야 outline에 반영된다. */
@@ -669,7 +684,8 @@
     opacity: 1;
 }
 .rct-point-label-lines {
-    stroke: #585;
+    stroke-width: var(--rct-point-label-line-stroke-width);
+    stroke: var(--rct-point-label-line-stroke);
     fill: none;
 }
 
@@ -680,7 +696,7 @@
 
 /** circlebar series */
 .rct-circlebar-series .rct-point {
-    stroke: white;
+    stroke: #fff;
 }
 
 /** barrange series */
@@ -694,14 +710,6 @@
 }
 .rct-line-series .rct-point {
     stroke-dasharray: none;
-}
-.rct-line-series .rct-point[data-focus] {
-    stroke: #0088ff20 !important; 
-    stroke-width: 9px !important;
-    opacity: inherit !important;
-    /** TODO: 아래가 적용되지 않고 있다 */
-    transition-property: opacity;
-    transition-duration: 0.7s;
 }
 .rct-line-series-flag {
     font-weight: bold;
@@ -740,6 +748,9 @@
 .rct-scatter-series {
     fill-opacity: 0.7;
 }
+.rct-scatter-series .rct-point[data-hover] {
+    fill-opacity: 0.9;
+}
 
 /** boxplot series */
 .rct-boxplot-series {
@@ -761,8 +772,8 @@
     stroke: #333;
     stroke-dasharray: 2;
 }
-.rct-boxplot-series .rct-point[data-focus] .rct-boxplot-point-stem {
-    stroke: black;
+.rct-boxplot-series .rct-point[data-hover] .rct-boxplot-point-stem {
+    stroke: #000;
     stroke-dasharray: none;
     stroke-width: 2px;
 }
@@ -772,7 +783,7 @@
     stroke-width: 1;
     fill-opacity: 0.85;
 }
-.rct-candlestick-series .rct-point[data-focus] {
+.rct-candlestick-series .rct-point[data-hover] {
     fill-opacity: 0.5;
 }
 .rct-candlestick-series .rct-point[data-decline] {
@@ -793,7 +804,7 @@
 .rct-ohlc-series .rct-point[data-decline] {
     stroke: #00f;
 }
-.rct-ohlc-series .rct-point[data-focus] .rct-ohlc-point-back {
+.rct-ohlc-series .rct-point[data-hover] .rct-ohlc-point-back {
     fill: #0088ff20 !important;
 }
 .rct-ohlc-point-back {
@@ -823,7 +834,7 @@
     stroke: #008;
     stroke-width: 2px;
 }
-.rct-errorbar-series .rct-point[data-focus] .rct-errorbar-point-back {
+.rct-errorbar-series .rct-point[data-hover] .rct-errorbar-point-back {
     fill: #0088ff20 !important;
 }
 
@@ -834,11 +845,11 @@
 .rct-lollipop-point-marker {
     stroke: none;
 }
-.rct-lollipop-series .rct-point[data-focus] {
+.rct-lollipop-series .rct-point[data-hover] {
     stroke: var(--rct-focus-stroke);
     stroke-width: inherit;
 }
-.rct-lollipop-series .rct-point[data-focus] .rct-lollipop-point-marker {
+.rct-lollipop-series .rct-point[data-hover] .rct-lollipop-point-marker {
     stroke: var(--rct-focus-stroke);
     stroke-width: var(--rct-focus-stroke-width);
 }
@@ -850,11 +861,11 @@
 .rct-dumbbell-point-marker {
     stroke: none;
 }
-.rct-dumbbell-series .rct-point[data-focus] {
+.rct-dumbbell-series .rct-point[data-hover] {
     stroke: var(--rct-focus-stroke);
     stroke-width: inherit;
 }
-.rct-dumbbell-series .rct-point[data-focus] .rct-dumbbell-point-marker {
+.rct-dumbbell-series .rct-point[data-hover] .rct-dumbbell-point-marker {
     stroke: var(--rct-focus-stroke);
     stroke-width: var(--rct-focus-stroke-width);
 }
@@ -863,20 +874,20 @@
 .rct-equalizer-series {
     fill-opacity: 0.9;
 }
-.rct-equalizer-series .rct-point[data-focus] {
+.rct-equalizer-series .rct-point[data-hover] {
     filter: brightness(120%);
 }
 
 /** histogram */
 .rct-histogram-series .rct-point {
-    stroke: white;
+    stroke: #fff;
 }
 
 /** vector series */
 .rct-vector-series {
     stroke-width: 2px;
 }
-.rct-vector-series .rct-point[data-focus] {
+.rct-vector-series .rct-point[data-hover] {
     stroke-width: 5px;
 }
 
@@ -887,12 +898,12 @@
 
 /** treemap series */
 .rct-treemap-series .rct-point {
-    stroke: white;
+    stroke: #fff;
 }
 
 /** pie series */
 .rct-pie-series .rct-point {
-    stroke: white;
+    stroke: #fff;
 }
 .rct-pie-series-inner {
     font-size: 20px;
@@ -901,10 +912,10 @@
 
 /** funnel series */
 .rct-funnel-series .rct-point {
-    stroke: white;
+    stroke: #fff;
 }
-.rct-funnel-series .rct-point[data-focus] {
-    stroke: black;
+.rct-funnel-series .rct-point[data-hover] {
+    stroke: #000;
     stroke-width: 2px;
 }
 
@@ -940,7 +951,7 @@
     font-size: 20px;
 }
 .rct-circle-gauge-pin {
-    fill: white;
+    fill: #fff;
     stroke: #333;
     stroke-width: 3px;
 }
@@ -972,7 +983,7 @@
     font-size: 1em;
 }
 .rct-clock-gauge-pin {
-    fill: white;
+    fill: #fff;
     stroke: #333;
     stroke-width: 3px;
 }
@@ -1061,10 +1072,10 @@
     opacity: 0.9;
 }
 .rct-tooltip-back {
-    fill: white;
+    fill: #fff;
 }
 .rct-tooltip-tail {
-    fill: white;
+    fill: #fff;
 }
 .rct-tooltip-text {
     fill: #333;
@@ -1087,6 +1098,7 @@
     fill: none;
     stroke-width: 1;
     stroke: #80808080;
+    shape-rendering: crispEdges;
 }
 .rct-crosshair-bar {
     stroke: none;
@@ -1111,8 +1123,9 @@
     display: none;
 }
 .rct-navigator-back {
-    fill: white;
+    fill: #fff;
     stroke: #f0f0f0;
+    shape-rendering: crispEdges;
 }
 .rct-navigator-mask {
     fill: #4488cc20;
@@ -1126,7 +1139,6 @@
     fill: var(--rct-navigator-handle-hover-color);
     stroke: var(--rct-navigator-handle-hover-color);
 }
-
 .rct-navigator-track {
     fill: var(--rct-navigator-track-fill);
     stroke: var(--rct-navigator-track-fill);
